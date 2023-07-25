@@ -2,8 +2,8 @@
 <api context="/serverinfo" name="ServerInfo" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="GET">
         <inSequence>
-            <class name="org.wso2.mi.sample.ServerName"/>
-            <class name="org.wso2.mi.sample.GreetingService"/>
+            <class name="org.wso2.mi.sample.ServerNameMediator"/>
+            <class name="org.wso2.mi.sample.GreetingMediator"/>
             <payloadFactory media-type="json">
                 <format>
                 {
@@ -22,4 +22,3 @@
         <faultSequence/>
     </resource>
 </api>
-

@@ -4,7 +4,7 @@ import org.apache.synapse.MessageContext;
 import org.apache.synapse.core.axis2.Axis2MessageContext;
 import org.apache.synapse.mediators.AbstractMediator;
 
-public class ServerName extends AbstractMediator { 
+public class ServerNameMediator extends AbstractMediator { 
 
 	public boolean mediate(MessageContext context) { 
 		// TODO Implement your mediation logic here
