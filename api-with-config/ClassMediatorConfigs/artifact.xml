@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="ServerInfo" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ServerInfo.xml</file>
+    </artifact>
+    <artifact name="ServerInfo_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ServerInfo_swagger.yaml</file>
+    </artifact>
+    <artifact name="ServerInfo_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ServerInfo_metadata.yaml</file>
+    </artifact>
+</artifacts>

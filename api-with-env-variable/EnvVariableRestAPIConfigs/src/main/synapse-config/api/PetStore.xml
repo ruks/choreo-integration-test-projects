@@ -19,7 +19,7 @@
          <payloadFactory media-type="json">
             <format>
 {
-	"Info": "Integration with secrets",
+	"Info": "Integration with environment variables",
 	"data": [{
 			"pet": "$1",
 			"name": "$2"

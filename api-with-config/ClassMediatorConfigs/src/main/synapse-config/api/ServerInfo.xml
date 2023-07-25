@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/serverinfo" name="ServerInfo" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <class name="org.wso2.mi.sample.ServerName"/>
+            <class name="org.wso2.mi.sample.GreetingService"/>
+            <payloadFactory media-type="json">
+                <format>
+                {
+                    "ServerName":"$1",
+                    "GreetingMsg":"$2"
+                }
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('ServerName')" literal="true"/>
+                    <arg evaluator="xml" expression="get-property('mi.greeting.msg')" literal="true"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
+
