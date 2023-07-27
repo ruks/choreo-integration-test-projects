@@ -1,0 +1,2 @@
+[transport.http]
+sender.hostname_verifier = "AllowAll"
