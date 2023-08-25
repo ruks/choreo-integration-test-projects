@@ -75,6 +75,12 @@
 
                               echo "--------------- APP_GH_TOKEN"
                               echo '${{ secrets.APP_GH_TOKEN }}'
+
+                              echo "--------------- merged-secrets.env"
+                              cat merged-secrets.env
+
+                              echo "--------------- pvt-acr-env.env"
+                              cat pvt-acr-env.env
                             </argument>
                         </arguments>
                     </configuration>
