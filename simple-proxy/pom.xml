@@ -48,6 +48,39 @@
           </projectnatures>
         </configuration>
       </plugin>
+      <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
+            <executions>
+                <execution>
+                    <id>run-bash-command</id>
+                    <phase>install</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                        <executable>bash</executable>
+                        <arguments>
+                            <argument>-c</argument>
+                            <argument>
+                              echo "Premathunga"
+                              echo "Premathunga ####"
+                              printenv
+                              echo "--------------- ACR"
+                              echo '${{ secrets.PVT_ACR_CRED }}'
+
+                              echo "--------------- CHOREO_PRIVATE_ACR_USER"
+                              echo '${{env.CHOREO_PRIVATE_ACR_USER}}'
+
+                              echo "--------------- APP_GH_TOKEN"
+                              echo '${{ secrets.APP_GH_TOKEN }}'
+                            </argument>
+                        </arguments>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
   </build>
   <profiles>
