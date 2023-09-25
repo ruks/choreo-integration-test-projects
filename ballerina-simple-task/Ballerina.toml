@@ -1,0 +1,8 @@
+[build-options]
+observabilityIncluded = true
+
+[package]
+distribution = "2201.7.0"
+name = "test"
+org = "ruks"
+version = "0.1.0"
