@@ -7,7 +7,7 @@ public function main() {
     io:println("Hello, World! 3");
     io:println("Hello, World! 4");
     io:println("Hello, World! Sleeping");
-    runtime:sleep(120);
+    runtime:sleep(10);
     io:println("Hello, World! 5");
     io:println("Hello, World! 6");
     io:println("Hello, World! 7");
