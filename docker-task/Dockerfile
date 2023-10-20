@@ -4,8 +4,8 @@ FROM python:3.8
 # Set the working directory to /app
 WORKDIR /app
 
-# Create a non-root user
-RUN useradd -ms /bin/bash myuser
+# Create a non-root user with a user ID between 10000 and 20000
+RUN useradd -u 10001 -ms /bin/bash myuser
 
 # Give the non-root user ownership of the working directory
 RUN chown -R myuser /app
