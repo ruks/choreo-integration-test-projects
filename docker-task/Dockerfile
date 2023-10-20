@@ -11,7 +11,7 @@ RUN useradd -u 10001 -ms /bin/bash myuser
 RUN chown -R myuser /app
 
 # Switch to the non-root user
-USER myuser
+USER 10001
 
 # Copy the current directory contents into the container at /app
 COPY . /app
