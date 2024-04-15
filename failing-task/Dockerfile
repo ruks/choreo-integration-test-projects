@@ -1,7 +1,11 @@
 # Use a lightweight base image
 FROM alpine:latest
 
+RUN apk update && apk add bash
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chown 10014:10014 /entrypoint.sh && chmod +x /entrypoint.sh
+
 USER 10014
-# Run the command
-# CMD ["sh", "-c", "echo \"Hello world!\" && sleep 5 && exit 42"]
-CMD ["sh", "-c", "for i in {1..10}; do echo \"Process ID: $$ - Hello world!\"; sleep 1; done && exit 42"]
+ENTRYPOINT ["/entrypoint.sh"]
+
