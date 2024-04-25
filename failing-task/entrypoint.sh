@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ID=$RANDOM
-for i in {1..10}; do
-    echo "$ID: Hello world!"
-    sleep 1
+for i in {1..100}; do
+    echo "$ID: Hello world!: $i"
 done
 exit 42
